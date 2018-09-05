@@ -553,15 +553,15 @@ RF_N
 $Comp
 L goodwatch30:YageoS432 A1
 U 1 1 59D2F54A
-P 2800 6750
-F 0 "A1" H 2800 7150 60  0000 C CNN
-F 1 "YageoS432" V 2650 6850 60  0000 C CNN
-F 2 "goodwatch30:YageoS432" H 2800 6750 60  0001 C CNN
-F 3 "" H 2800 6750 60  0001 C CNN
-F 4 "Only used outside of a watch case." H 2800 6750 50  0001 C CNN "Notes"
-F 5 "YES" H 2800 6750 50  0001 C CNN "DNP"
-F 6 "ant-smd-yageos432" H 0   0   50  0001 C CNN "Key"
-	1    2800 6750
+P 3100 6500
+F 0 "A1" H 3100 6900 60  0000 C CNN
+F 1 "YageoS432" V 2950 6600 60  0000 C CNN
+F 2 "goodwatch30:YageoS432" H 3100 6500 60  0001 C CNN
+F 3 "" H 3100 6500 60  0001 C CNN
+F 4 "Only used outside of a watch case." H 3100 6500 50  0001 C CNN "Notes"
+F 5 "YES" H 3100 6500 50  0001 C CNN "DNP"
+F 6 "ant-smd-yageos432" H 300 -250 50  0001 C CNN "Key"
+	1    3100 6500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -911,18 +911,6 @@ F 4 "balun-b0310j50100ahf" H 0   0   50  0001 C CNN "Key"
 	1    4850 7300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C10
-U 1 1 5B642CDA
-P 3050 7100
-F 0 "C10" H 3075 7200 50  0000 L CNN
-F 1 "220pF" H 3075 7000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" V 3400 7000 50  0000 C CNN
-F 3 "" H 3050 7100 50  0000 C CNN
-F 4 "cap-cer-0402-220p" H 0   0   50  0001 C CNN "Key"
-	1    3050 7100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4450 7100 4200 7100
 Wire Wire Line
@@ -958,39 +946,43 @@ GND
 $Comp
 L Connector:Conn_Coaxial J1
 U 1 1 5B8D41DD
-P 2350 6550
-F 0 "J1" V 2450 6550 50  0000 L CNN
-F 1 "ANT_U.FL" H 2150 6700 50  0000 L CNN
-F 2 "Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical" H 2350 6550 50  0001 C CNN
-F 3 " ~" H 2350 6550 50  0001 C CNN
-F 4 "Only used outside of a watch case." H 2350 6550 50  0001 C CNN "Notes"
-F 5 "YES" H 2350 6550 50  0001 C CNN "DNP"
-F 6 "conn-umcc" H 0   0   50  0001 C CNN "Key"
-	1    2350 6550
-	0    1    -1   0   
+P 2550 7100
+F 0 "J1" V 2650 7100 50  0000 L CNN
+F 1 "ANT_U.FL" H 2350 7250 50  0000 L CNN
+F 2 "Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical" H 2550 7100 50  0001 C CNN
+F 3 " ~" H 2550 7100 50  0001 C CNN
+F 4 "Only used outside of a watch case." H 2550 7100 50  0001 C CNN "Notes"
+F 5 "YES" H 2550 7100 50  0001 C CNN "DNP"
+F 6 "conn-umcc" H 200 550 50  0001 C CNN "Key"
+	1    2550 7100
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 7000 2800 7100
-Wire Wire Line
-	2800 7100 2900 7100
-Wire Wire Line
-	2800 7100 2350 7100
-Wire Wire Line
-	2350 7100 2350 6750
-Connection ~ 2800 7100
 $Comp
 L power:GND #PWR0101
 U 1 1 5B8FCF2F
-P 2050 7200
-F 0 "#PWR0101" H 2050 6950 50  0001 C CNN
-F 1 "GND" H 2050 7050 50  0000 C CNN
-F 2 "" H 2050 7200 50  0000 C CNN
-F 3 "" H 2050 7200 50  0000 C CNN
-	1    2050 7200
+P 2550 7350
+F 0 "#PWR0101" H 2550 7100 50  0001 C CNN
+F 1 "GND" H 2550 7200 50  0000 C CNN
+F 2 "" H 2550 7350 50  0000 C CNN
+F 3 "" H 2550 7350 50  0000 C CNN
+	1    2550 7350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 6550 2050 6550
+	2550 7350 2550 7300
 Wire Wire Line
-	2050 6550 2050 7200
+	2750 7100 2800 7100
+$Comp
+L goodwatch30:C_Jumper C10
+U 1 1 5B917E07
+P 3100 7100
+F 0 "C10" H 2993 6932 60  0000 C CNN
+F 1 "220pF" H 2993 6826 60  0000 C CNN
+F 2 "goodwatch30:C_Jumper_0402_1005Metric" V 3095 7100 60  0001 C CNN
+F 3 "" V 3095 7100 60  0001 C CNN
+	1    3100 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 6800 3100 6750
 $EndSCHEMATC
